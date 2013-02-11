@@ -3,6 +3,8 @@ Simple Recommender
 
 Recommender based on [XPLR topics API](https://xplr.com/developers/), using the python [whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home) index and search engine.
 
+Browse [all software from XPLR](https://xplr.com/apps).
+
 Description
 -----------
 
