@@ -3,23 +3,23 @@ Simple Recommender
 
 Recommender based on [XPLR topics API](https://xplr.com/developers/), using the python [whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home) index and search engine.
 
+[Dedicated page](https://xplr.com/apps/apps-python-simplerecommend)
 Browse [all software from XPLR](https://xplr.com/apps).
 
 Description
 -----------
 
-This application permits the following operations :
+This application allows the following operations :
 
-* *Indexing* : From an url list, get XPLR prediction on the resources located at these
-urls, and indexes the topics returned using the whoosh indexing engine.
+* *Index* a set of documents : From an URL list, get XPLR prediestimate topics from each URL content with XPLR API and indexes the topics returned using the whoosh indexing engine.
 
-* *Recomend* : From an url, performs a XPLR topics prediction, then search in the indexed
-documents the more relevants for the topics predicted.
+* *Recommend* : Takes a URL as input and recommends the most relevant indexed URLs according to the underlying topics, predicted with XPLR API.
+
 
 Licence 
 -------
 
-This application is realased under the MIT licence
+This application is released under the MIT licence.
 
 > 
 > Copyright (c) 2012 Xplr Software Inc
@@ -34,7 +34,7 @@ This application is realased under the MIT licence
 Prerequisites
 -------------
 
-- Get an XPLR account and API key on www.xplr.com, the key hash is to be passed as an argument to the script
+- Get an XPLR account and API key on https://www.xplr.com, the API key is to be passed as an argument to the script.
 
 Usage
 -----
@@ -69,11 +69,11 @@ Usage
 
 Indexing urls contained	in ~/my_url_list into a whoosh index in /tmp/index_dir with XPLR predicted topics:
 
-    python topicssearch.py  -i -d /tmp/index_dir -s ~/my_url_list -S -K 46eb069e-3d2b-11e2-9eeb-080027752be2 -H api.xplr.com
+    python recommend.py  -i -d /tmp/index_dir -s ~/my_url_list -S -K 46eb069e-3d2b-11e2-9eeb-080027752be2 -H api.xplr.com
 
-Getting recommandations from the index for the page located at http://www.usa.gov/topics/science/communications/internet/spam.shtml
+Getting recommendations for the page located at http://www.usa.gov/topics/science/communications/internet/spam.shtml
 
-    python topicssearch.py  -d /tmp/index_dir -r "http://www.usa.gov/topics/science/communications/internet/spam.shtml" -S -K 46eb069e-3d2b-11e2-9eeb-080027752be2 -H api.xplr.com
+    python recommend.py  -d /tmp/index_dir -r "http://www.usa.gov/topics/science/communications/internet/spam.shtml" -S -K 46eb069e-3d2b-11e2-9eeb-080027752be2 -H api.xplr.com
 
 
 
