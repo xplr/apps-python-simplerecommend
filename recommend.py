@@ -304,6 +304,10 @@ if __name__ == '__main__':
         parser.error('XPLR host required')
     XPLR_HOST=options.apihost
     XPLR_SSL=options.apissl
+
+    if options.indexdir:
+        INDEX_DIR=options.indexdir
+
     if options.apiport:
         XPLR_HOST+=":"+options.apiport
 
