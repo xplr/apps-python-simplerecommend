@@ -132,9 +132,9 @@ def get_prediction(url,topics_count=10):
             
     # Create an urllib2 Request object
     if XPLR_SSL:
-        xplrurl='https://%s/topics/predict'%(XPLR_HOST,)
+        xplrurl='https://%s/predict'%(XPLR_HOST,)
     else:
-        xplrurl='http://%s/topics/predict'%(XPLR_HOST,)
+        xplrurl='http://%s/predict'%(XPLR_HOST,)
     req = urllib2.Request(xplrurl, data)
     
     # Add api key to the HTTP header
