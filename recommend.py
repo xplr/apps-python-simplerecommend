@@ -287,7 +287,7 @@ if __name__ == '__main__':
     group.add_option("-P", "--port", dest="apiport",
                       help="XPLR API port")
     group.add_option("-S", "--ssl", dest="apissl",
-                      action="store_true", default=True,
+                      action="store_true", default=False,
                       help="use ssl on XPLR calls")
     parser.add_option_group(group)
 
